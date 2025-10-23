@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 
 
 def plot(x, y, w, b, alpha, history):
-    fig, ax = plt.subplots(1, 4)
+    fig, ax = plt.subplots(1, 5)
 
-    feature_names = ["Size (1000 sqft)", "Bedrooms", "Floors"]
+    feature_names = ["Size (1000 sqft)", "Bedrooms", "Floors", "Age"]
 
     # Plot each feature with regression line (first 3 subplots)
-    for i in range(3):
+    for i in range(len(feature_names)):
         ax[i].scatter(x[:, i], y, color="red", marker="x", s=20)
 
         # Create line for this feature (holding others at their mean)
@@ -32,5 +32,5 @@ def plot(x, y, w, b, alpha, history):
     ax[3].set_xlabel("Iterations")
     ax[3].set_ylabel("J(w,b)")
 
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0.93, 1, 0.05])
     plt.show()

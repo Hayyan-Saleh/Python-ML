@@ -3,7 +3,13 @@ import numpy as np
 
 def get_training_examples():
     x_training = np.array(
-        [[2000, 4, 2], [1300, 2, 1], [700, 2, 1], [900, 3, 2], [1500, 3, 1]]
+        [
+            [2000, 4, 2, 12],
+            [1300, 2, 1, 58],
+            [700, 2, 1, 93],
+            [900, 3, 2, 18],
+            [1500, 3, 1, 30],
+        ]
     )  # house sizes in  sqft, house bedrooms number, house floors number
     y_training = np.array([600, 360, 200, 300, 400])  # house prices in 1000 USD
     return x_training, y_training
